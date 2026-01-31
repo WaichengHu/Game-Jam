@@ -15,6 +15,7 @@ coyote_timer = 0;
 jump_hold_grav = 0.18;
 
 global.vector_mascaras = [];
+global.vector_sprites_mascaras = [];
 
 mask = "default";
 
@@ -22,3 +23,5 @@ idle = spr_bicho_idle;
 walk = spr_bicho_walk;
 dash = false;
 dash_timer = 15;
+
+used_cloud = false;

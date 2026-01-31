@@ -61,7 +61,16 @@ function player_normal(){
 	    }
 	    vsp = 0;
 	}
+
+		
+		
 	y += vsp;
+	
+		
+	if (instance_exists(obj_tornado) and (abs(obj_tornado.x - x) < 8)) {
+		vsp = -jump_spd;
+	}
+	
 
 	//switch de states de mascaras
 
@@ -71,7 +80,14 @@ function player_normal(){
 			image_angle -= 90 * image_xscale;
 			dash = true;
 		}
-	}
+	} else if (mask == "cloud") {
+		if (action and !instance_exists(obj_tornado) and (place_meeting(x, y + 1, obj_solid))) {
+			instance_create_depth(x,y,depth+1, obj_tornado);
+		} else if (action and instance_exists(obj_tornado) and (place_meeting(x, y + 1, obj_solid))) {
+			obj_tornado.x = x; obj_tornado.y = y;
+		}
+		
+	}	
 
 
 	//animaciones
