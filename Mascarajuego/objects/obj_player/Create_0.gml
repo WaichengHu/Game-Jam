@@ -25,3 +25,8 @@ dash = false;
 dash_timer = 15;
 
 used_cloud = false;
+
+flash_timer = 15;
+is_flash = false;
+flash_x = x;
+flash_y = y;

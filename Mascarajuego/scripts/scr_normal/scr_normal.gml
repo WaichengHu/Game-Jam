@@ -6,6 +6,7 @@ function player_normal(){
 	var jump_held = keyboard_check(vk_space);
 	var action = keyboard_check(ord("K"));
 	
+	flash_timer--;
 
 
 
@@ -87,7 +88,24 @@ function player_normal(){
 			obj_tornado.x = x; obj_tornado.y = y;
 		}
 		
-	}	
+	} else if (mask == "flash") {
+		if (action and flash_timer <= 0) {
+			if (is_flash) {
+				x = flash_x;
+				y = flash_y;
+				is_flash = false;
+			} else {
+				flash_x = x;
+				flash_y = y;
+				is_flash = true;
+			
+			}
+			flash_timer = 15;
+		}
+		if (is_flash and !instance_exists(obj_player_flash)) {
+			instance_create_depth(x,y,depth+1, obj_player_flash);
+		}
+	}
 
 
 	//animaciones

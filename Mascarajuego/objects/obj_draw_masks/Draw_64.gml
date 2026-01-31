@@ -67,8 +67,3 @@ draw_set_halign(fa_left);
 draw_set_valign(fa_top);
 draw_set_color(c_white);
 
-// DEBUG
-draw_set_color(c_red);
-draw_text(10, 10, "HUD Activo");
-draw_text(10, 30, "Items: " + string(array_length(global.vector_sprites_mascaras)));
-draw_set_color(c_white);

@@ -1,8 +1,8 @@
-// --- CONFIGURACIÓN DE RESOLUCIÓN ---
+
 base_w = 320;
 base_h = 208;
 
-gpu_set_texfilter(false); // Pixel art nítido
+gpu_set_texfilter(false); 
 
 // Setup básico
 view_enabled = true;
@@ -11,11 +11,9 @@ view_set_visible(0, true);
 cam = view_camera[0];
 camera_set_view_size(cam, base_w, base_h);
 
-// --- CONFIGURACIÓN DE MOVIMIENTO ---
-target = obj_player; // Cambia esto por el nombre de tu objeto jugador
-spd = 0.1; // Velocidad de suavizado (0.1 es suave, 1 es instantáneo)
+target = obj_player; 
+spd = 0.1;
 
-// Posicionamos la cámara inmediatamente en el jugador al iniciar
 if (instance_exists(target)) {
     var _x = target.x - base_w / 2;
     var _y = target.y - base_h / 2;
