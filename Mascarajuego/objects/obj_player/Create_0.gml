@@ -30,3 +30,6 @@ flash_timer = 15;
 is_flash = false;
 flash_x = x;
 flash_y = y;
+
+gravedad_normal = true;
+gravi_timer = 60;

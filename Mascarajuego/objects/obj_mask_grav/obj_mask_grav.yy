@@ -1,11 +1,11 @@
 {
   "$GMObject":"",
-  "%Name":"obj_mask_flash",
+  "%Name":"obj_mask_grav",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_mask_flash",
+  "name":"obj_mask_grav",
   "overriddenProperties":[],
   "parent":{
     "name":"Objetos",
@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_mask_flash",
-    "path":"sprites/spr_mask_flash/spr_mask_flash.yy",
+    "name":"spr_mask_grav",
+    "path":"sprites/spr_mask_grav/spr_mask_grav.yy",
   },
   "spriteMaskId":null,
   "visible":true,

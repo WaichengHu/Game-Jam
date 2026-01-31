@@ -4,7 +4,12 @@ if (!instance_exists(obj_transicion)) {
 	    player_dash();
 	}
 	else {
-	    player_normal();
+		if (gravedad_normal) {
+		   player_normal();
+		} else {
+			player_reversed();
+		}
+
 	}
 } else {
 	image_speed = 0;

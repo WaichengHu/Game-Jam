@@ -7,8 +7,8 @@ function player_normal(){
 	var action = keyboard_check(ord("K"));
 	
 	flash_timer--;
-
-
+	gravi_timer--;
+	image_yscale = 1;
 
 	//cosas varias
 	
@@ -105,25 +105,36 @@ function player_normal(){
 		if (is_flash and !instance_exists(obj_player_flash)) {
 			instance_create_depth(x,y,depth+1, obj_player_flash);
 		}
+	} else if (mask == "gravedad") {
+		if (action and gravi_timer <= 0) {
+			if gravedad_normal {gravedad_normal = false;} else 
+			{gravedad_normal = true;}
+			gravi_timer = 60;
+		}
 	}
 
 
 	//animaciones
-	if (!place_meeting(x, y + sign(vsp), obj_solid)) {
+	if (place_meeting(x, y + 1, obj_solid)) {
 		//no esta en el aire
 		if (hsp != 0) {
 			sprite_index = walk;
 			image_speed = 1;
 		
-			if (hsp < 0) {
-				image_xscale = -1;
-			} else {
-				image_xscale = 1;
-			}
+
 		} else {
 			sprite_index = idle;
 			image_speed = 0.3;
 		}
+	} else {
+		sprite_index = idle;
+		image_speed = 0;
+	}
+	
+	if (hsp < 0) {
+		image_xscale = -1;
+	} else if (hsp > 0) {
+		image_xscale = 1;
 	}
 
 

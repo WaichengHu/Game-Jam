@@ -1,3 +1,3 @@
 global.masks = 0
 global.total_masks = 0;
-depth = 1;
+depth = 10;
