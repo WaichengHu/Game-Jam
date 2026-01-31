@@ -16,4 +16,8 @@ jump_hold_grav = 0.18;
 
 global.vector_mascaras = [];
 
-state = "default";
+mask = "default";
+
+idle = spr_bicho_idle;
+walk = spr_bicho_walk;
+dash = true;

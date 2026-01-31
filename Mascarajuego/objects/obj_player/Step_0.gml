@@ -2,12 +2,14 @@
 var horiz = keyboard_check(ord("D")) - keyboard_check(ord("A"));
 var jump_pressed = keyboard_check_pressed(vk_space);
 var jump_held = keyboard_check(vk_space);
+var action = keyboard_check(ord("K"));
 
 
 //cosas varias
 
 if (place_meeting(x, y + 1, obj_solid)) {
     coyote_timer = coyote_max;
+	dash = true;
 } else {
     coyote_timer--;
 }
@@ -56,3 +58,33 @@ if (place_meeting(x, y + vsp, obj_solid)) {
 y += vsp;
 
 //switch de states de mascaras
+
+if (mask == "dash") {
+	instance_create_depth(x,y,depth+1,obj_part_fire);
+	if (action and dash and !place_meeting(x, y + 1, obj_solid)) {
+		hsp = 8 * image_xscale;
+		vsp = -1;
+		dash = false;
+	}
+}
+
+
+//animaciones
+if (!place_meeting(x, y + sign(vsp), obj_solid)) {
+	//no esta en el aire
+	if (hsp != 0) {
+		sprite_index = walk;
+		image_speed = 1;
+		instance_create_depth(x,y+8,depth+1,obj_part_walk);
+		if (hsp < 0) {
+			image_xscale = -1;
+		} else {
+			image_xscale = 1;
+		}
+	} else {
+		sprite_index = idle;
+		image_speed = 0.3;
+	}
+}
+
+//ir haciendo particulas
