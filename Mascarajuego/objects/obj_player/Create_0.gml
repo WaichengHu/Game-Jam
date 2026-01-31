@@ -33,3 +33,6 @@ flash_y = y;
 
 gravedad_normal = true;
 gravi_timer = 60;
+
+bloque_timer = 15;
+bloque_cambiado = false;

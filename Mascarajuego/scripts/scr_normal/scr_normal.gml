@@ -111,7 +111,14 @@ function player_normal(){
 			{gravedad_normal = true;}
 			gravi_timer = 60;
 		}
+	} else if (mask == "mario") {
+		if (action and bloque_timer <= 0) {
+			if bloque_cambiado {bloque_cambiado = false} else {bloque_cambiado = true}
+			bloque_timer = 15;
+		}
 	}
+	
+	bloque_timer--;
 
 
 	//animaciones

@@ -1,5 +1,5 @@
 
-if (!instance_exists(obj_transicion)) {
+if (!instance_exists(obj_transicion) and !instance_exists(obj_director)) {
 	if (dash) {
 	    player_dash();
 	}

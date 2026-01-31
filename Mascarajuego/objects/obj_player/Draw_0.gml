@@ -9,5 +9,7 @@ if (mask != "default") {
 		draw_sprite_ext(spr_mask_flash_eq,image_index,x,y,image_xscale,image_yscale,image_angle,image_blend,image_alpha);
 	} else if (mask == "gravedad") {
 		draw_sprite_ext(spr_mask_grav_eq,image_index,x,y,image_xscale,image_yscale,image_angle,image_blend,image_alpha);
+	} else if (mask == "mario") {
+		draw_sprite_ext(spr_mask_mario_eq,image_index,x,y,image_xscale,image_yscale,image_angle,image_blend,image_alpha);
 	}
 }
