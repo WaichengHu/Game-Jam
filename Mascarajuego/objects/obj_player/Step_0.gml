@@ -16,3 +16,10 @@ if (!instance_exists(obj_transicion) and !instance_exists(obj_director)) {
 	hspeed = 0;
 	vspeed = 0;
 }
+
+if keyboard_check(ord("R")) {
+	if (!instance_exists(obj_transicion)) {
+	    var _tran = instance_create_depth(0, 0, -9999, obj_transicion);
+	    _tran.target_room = room;
+	}
+}
