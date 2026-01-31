@@ -20,4 +20,5 @@ mask = "default";
 
 idle = spr_bicho_idle;
 walk = spr_bicho_walk;
-dash = true;
+dash = false;
+dash_timer = 15;
