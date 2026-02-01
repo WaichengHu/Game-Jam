@@ -37,7 +37,8 @@ gravi_timer = 60;
 bloque_timer = 15;
 bloque_cambiado = false;
 
-bomb_timer = 600;
-bomb_timer_2 = 10;
+bomb_timer_2 = 5;
+bomb_timer = bomb_timer_2 * 60;
+
 
 timer_steps = 130;
