@@ -14,11 +14,25 @@ function player_normal(){
 	
 	image_angle = 0;
 	
+	timer_steps--;
+	
+	if hsp != 0 and timer_steps < 0 and place_meeting(x, y + 1, obj_solid){
+		audio_play_sound(snd_walk,79,0);
+		timer_steps = 130;
+	}
+	if hsp = 0 {
+		audio_stop_sound(snd_walk);
+		timer_steps = 0;
+	}
+	
 	if (place_meeting(x, y + 1, obj_solid)) {
 	    coyote_timer = coyote_max;
 		dash_timer = 12;
+		
 	} else {
 	    coyote_timer--;
+		audio_stop_sound(snd_walk);
+		timer_steps = 0;
 	}
 
 	if (horiz != 0) {

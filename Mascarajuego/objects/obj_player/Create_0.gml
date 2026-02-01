@@ -39,3 +39,5 @@ bloque_cambiado = false;
 
 bomb_timer = 600;
 bomb_timer_2 = 10;
+
+timer_steps = 130;
