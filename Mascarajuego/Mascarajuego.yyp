@@ -45,6 +45,7 @@
     {"id":{"name":"obj_draw_masks","path":"objects/obj_draw_masks/obj_draw_masks.yy",},},
     {"id":{"name":"obj_fire_part","path":"objects/obj_fire_part/obj_fire_part.yy",},},
     {"id":{"name":"obj_fire","path":"objects/obj_fire/obj_fire.yy",},},
+    {"id":{"name":"obj_fullsceen","path":"objects/obj_fullsceen/obj_fullsceen.yy",},},
     {"id":{"name":"obj_logo","path":"objects/obj_logo/obj_logo.yy",},},
     {"id":{"name":"obj_mask_bomb","path":"objects/obj_mask_bomb/obj_mask_bomb.yy",},},
     {"id":{"name":"obj_mask_cloud","path":"objects/obj_mask_cloud/obj_mask_cloud.yy",},},
