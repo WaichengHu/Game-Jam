@@ -46,6 +46,7 @@ function player_reversed(){
     // SALTO (AHORA VA HACIA ABAJO, POSITIVO)
     if (jump_pressed && coyote_timer > 0) {
         vsp = jump_spd; // Positivo para bajar (alejarse del techo)
+		audio_play_sound(snd_jump,20,0);
         coyote_timer = 0;
     }
 
@@ -53,6 +54,7 @@ function player_reversed(){
     // Si vsp > 0 significa que estamos "saltando" (cayendo hacia el suelo real)
     if (vsp > 0 && jump_held) {
         vsp -= jump_hold_grav; // Restamos gravedad (tira hacia arriba)
+		
     } else {
         vsp -= grv; // Restamos gravedad (tira hacia arriba)
     }
@@ -80,7 +82,8 @@ function player_reversed(){
         instance_create_depth(x,y,depth+1,obj_part_fire);
         if (action and dash_timer >= 12) {
             image_angle -= 90 * image_xscale; // Nota: al estar invertido el yscale, esto rotará visualmente correcto
-            dash = true;
+            audio_play_sound(snd_dash,50,0);
+			dash = true;
         }
     } else if (mask == "cloud") {
         // CAMBIADO Y+1 POR Y-1 PARA DETECTAR TECHO
@@ -95,6 +98,7 @@ function player_reversed(){
             if (is_flash) {
                 x = flash_x;
                 y = flash_y;
+				audio_play_sound(snd_tp,53,0)
                 is_flash = false;
             } else {
                 flash_x = x;
@@ -106,17 +110,20 @@ function player_reversed(){
         }
         if (is_flash and !instance_exists(obj_player_flash)) {
             instance_create_depth(x,y,depth+1, obj_player_flash);
+			audio_play_sound(snd_tp,53,0)
         }
     } else if (mask == "gravedad") {
         if (action and gravi_timer <= 0) {
             if gravedad_normal {gravedad_normal = false;} else 
             {gravedad_normal = true;}
             gravi_timer = 60;
+			audio_play_sound(snd_grav,52,0)
         }
     } else if (mask == "mario") {
 		if (action and bloque_timer <= 0) {
 			if bloque_cambiado {bloque_cambiado = false} else {bloque_cambiado = true}
 			bloque_timer = 15;
+			audio_play_sound(snd_block,34,0);
 		}
 	} else if (mask == "bomba") {
 		bomb_timer--;
@@ -129,6 +136,7 @@ function player_reversed(){
 			effect_create_depth(-1,ef_explosion,x,y,30,c_yellow);
 			effect_create_depth(-1,ef_ring,x,y,30,c_red);
 			var _tran = instance_create_depth(0,0,-9999,obj_transicion);
+			audio_play_sound(snd_boom,1,0);
 			_tran.target_room = room;
 		}
 	}

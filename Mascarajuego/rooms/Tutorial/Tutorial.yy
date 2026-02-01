@@ -17,6 +17,7 @@
     {"name":"inst_3E94103F","path":"rooms/Tutorial/Tutorial.yy",},
     {"name":"inst_EE3705E","path":"rooms/Tutorial/Tutorial.yy",},
     {"name":"inst_692752D2","path":"rooms/Tutorial/Tutorial.yy",},
+    {"name":"inst_3F45BA31","path":"rooms/Tutorial/Tutorial.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -32,6 +33,7 @@
         {"$GMRInstance":"v4","%Name":"inst_3E94103F","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_3E94103F","objectId":{"name":"obj_camara","path":"objects/obj_camara/obj_camara.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":152.0,"y":56.0,},
         {"$GMRInstance":"v4","%Name":"inst_EE3705E","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_EE3705E","objectId":{"name":"obj_buzon","path":"objects/obj_buzon/obj_buzon.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":264.0,"y":128.0,},
         {"$GMRInstance":"v4","%Name":"inst_692752D2","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_692752D2","objectId":{"name":"obj_controls_3","path":"objects/obj_controls_3/obj_controls_3.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":232.0,"y":56.0,},
+        {"$GMRInstance":"v4","%Name":"inst_3F45BA31","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_3F45BA31","objectId":{"name":"obj_music_game","path":"objects/obj_music_game/obj_music_game.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":80.0,"y":56.0,},
       ],"layers":[],"name":"Instances","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRTileLayer":"","%Name":"Tiles","depth":100,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Tiles","properties":[],"resourceType":"GMRTileLayer","resourceVersion":"2.0","tiles":{"SerialiseHeight":13,"SerialiseWidth":20,"TileCompressedData":[
           -21,6,-18,-2147483648,-2,6,-18,-2147483648,-2,6,-18,-2147483648,-2,6,-2,-2147483648,-2,0,-14,-2147483648,
