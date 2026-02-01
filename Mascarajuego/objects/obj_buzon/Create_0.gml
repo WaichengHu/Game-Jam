@@ -7,3 +7,4 @@ global.first_cloud = true;
 global.first_flash = true;
 global.first_grav = true;
 global.first_mario = true;
+global.first_bomba = true;

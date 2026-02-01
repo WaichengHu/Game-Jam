@@ -116,9 +116,23 @@ function player_normal(){
 			if bloque_cambiado {bloque_cambiado = false} else {bloque_cambiado = true}
 			bloque_timer = 15;
 		}
+	} else if (mask == "bomba") {
+		bomb_timer--;
+		if (bomb_timer % 60 == 0) {
+			bomb_timer_2 --;
+		}
+		if (bomb_timer <= 0 or action) {
+			effect_create_depth(-1,ef_spark,x,y,30,c_red);
+			effect_create_depth(-1,ef_cloud,x,y,30,c_orange);
+			effect_create_depth(-1,ef_explosion,x,y,30,c_yellow);
+			effect_create_depth(-1,ef_ring,x,y,30,c_red);
+			var _tran = instance_create_depth(0,0,-9999,obj_transicion);
+			_tran.target_room = room;
+		}
 	}
 	
 	bloque_timer--;
+	
 
 
 	//animaciones

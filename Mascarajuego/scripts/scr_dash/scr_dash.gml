@@ -2,6 +2,7 @@
 function player_dash(){
 	dash_timer--;
 	if (dash_timer <= 0) {
+		vsp = 0;
 		dash = false;
 	}
 	
